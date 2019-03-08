@@ -12171,7 +12171,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: No caso, temos 92.3% então a coluna prediction se ajusta bem a coluna True Value. Apesar de não ser o melhor possível é um bom resultado.</strong></p>
+<p><strong>Answer: No caso, temos 92.3% então a coluna prediction se ajusta bem a coluna True Value. O R2 é calculado por 1 menos o somatório dos erros do True Value em relação ao Prediction elevado ao quadrado dividido pelo somatório dos erros de True Value em relação a sua média elavado ao quadrado. A medida de R2 de certa forma pode dizer o quão bem o modelo está ajustado em relação aos pontos em um modelo linear então quanto mais próximo de 1 mais ajustado ele está. Caso haja, a inclusão de variáveis o valor de R2 pode aumentar o que faz com que se use o R2 Ajustado que nesse caso o R2 não será tão afetado.</strong></p>
 
 </div>
 </div>
@@ -12248,7 +12248,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: O benefício é que conseguimos saber o quão bem está o nosso modelo. Ele pode estar viciado, ou seja, somente avalia bem para aquele conjunto em que foi treinado então com os dados de teste conseguimos testar outros casos e verificar qual é a efetividade de fato do modelo.</strong></p>
+<p><strong>Answer: O benefício é que conseguimos saber o quão bem está o nosso modelo. Ele pode estar viciado, ou seja, somente avalia bem para aquele conjunto em que foi treinado então com os dados de teste conseguimos testar outros casos e verificar qual é a efetividade de fato do modelo. O modelo vai ser treinado com o conjunto de treinamento e irá encontrar padrões após isso o conjunto de testes será utilizado para testar o modelo com exemplos novos assim saberemos se ele está overfitting ou underfitting baseado nos resultados encontrados para o conjunto de testes. É importante ressaltar que uma acurácia alta no conjunto de treinamento pode não dizer nada pois o modelo pode estar overfitting e nem sabemos, por isso precisamos do conjunto de testes.</strong></p>
 
 </div>
 </div>
@@ -12395,7 +12395,7 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: Quando o modelo tem uma profundidade máxima de 1 ele não sofre de variância alta e nem de bias alto. No caso, da profundidade 10 o modelo está totalmente perdido com variância alta e bias alto pois o training score e o validation score estão indo para direções opostas e a distância entre eles está extremamente alta.</strong></p>
+<p><strong>Answer: Quando o modelo é treinado com uma profundidade máxima de 1, ele sofre de high bias pois tanto o score do treinamento quanto da validação são baixos. Quando o modelo é treinado com profundidade máxima de 10 então ele tem uma alta variância pois o conjunto de treinamento tem um bom desempenho porém o conjunto de validação está muito distante, podemos observar que o conjunto de treinamento está quase em 1 de score enquanto o conjunto de validação está próximo de 0,6.</strong></p>
 
 </div>
 </div>
